@@ -2,21 +2,20 @@
 
 ### XPath Targets for Posting
 
+-[x] posting_link _.xpath("//a[@class='result-title hdrlnk']/@href")_
 -[x] posting_title _.xpath("//span[@id='titletextonly']").text_
--[] posting_specific_location _.xpath("")_
--[] posting_postal_code _.xpath("")_
+-[x] posting_specific_location _.xpath("//span[@class='postingtitletext']/small").text_
 -[x] posting_body _.xpath("//section[@id='postingbody']")_
--[x] posting_square_footage _.xpath("//span[@class='shared-line-bubble'][2]")_
--[x] posting_price _.xpath("//span[@class='price']").text.gsub!('$','').to_i_
+-[x] posting_square_footage _.xpath("//span[@class='shared-line-bubble'][2]").text.to_i_
+-[x] posting_price _.xpath("//span[@class='price']").text.gsub!('$','').text.gsub!('$','').to_i_
 -[] posting_availability _.xpath("//span[@class='housing_movein_now property_date shared-line-bubble attr_is_today']")_
 -[x] posting_bedrooms _.xpath("//span[@class='shared-line-bubble'][1]/b[1]").children.text.to_i_
 -[x] posting_bathrooms _.xpath("//span[@class='shared-line-bubble'][1]/b[2]").children.text.to_i_
 -[x] posting_address_street _.xpath("//div[@class='mapaddress']").children.text_
--[] posting_email_address _.xpath("")_
--[] posting_phone_number _.xpath("")_
--[] posting_cross_street _.xpath("")_
--[] posting_city _.xpath("")_
--[x] posting_date_posted _.xpath("//time[@class='date timeago']")_
+-[x] posting_email_address _.xpath("//a[@class='mailapp']")_
+-[x] posting_phone_number _.xpath("//p[@class='reply-tel-number']")_
+-[x] posting_date_posted _.xpath("//time[@class='date timeago']").text.split(' ')[0]_
+-[x] posting_post_id _.xpath("//p[@class='postinginfo'][1]")_
 
 ### XPath Targets for Amenities
 -[x] Housing Type _(apartment, condo, cottage/cabin, duplex, flat, house, in-law, loft, townhouse, manufactured, assisted living, land)_
@@ -38,9 +37,9 @@
 * posting_optional_field8 _.xpath("//p[@class='attrgroup'][3]/span[8]").text_
 
 ### XPath Targets for Open House Dates
--[] posting_open_house_date1 _.xpath("//p[@class='attrgroup'][2]/span[1])_
--[] posting_open_house_date2 _.xpath("//p[@class='attrgroup'][2]/span[2])_
--[] posting_open_house_date3 _.xpath("//p[@class='attrgroup'][2]/span[3])_
+-[] posting_open_house_date1 _.xpath("//p[@class='attrgroup'][2]/span[1]")_
+-[] posting_open_house_date2 _.xpath("//p[@class='attrgroup'][2]/span[2]")_
+-[] posting_open_house_date3 _.xpath("//p[@class='attrgroup'][2]/span[3]")_
 
 ### XPath Target Move in Date
 -[x] posting_move_in_date _.xpath("//span[@class='housing_movein_now property_date shared-line-bubble']")_
