@@ -1,6 +1,6 @@
 class Postings < ActiveRecord::Migration[5.1]
   def change
-    create_table :products do |t|
+    create_table :postings do |t|
       t.string :posting_link
       t.string :posting_title
       t.text :posting_body
