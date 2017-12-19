@@ -14,8 +14,13 @@ def new
 end
 
 def create
-  @posting = Posting.new(product_params)
-
+  @posting = Posting.new(posting_params)
+  if @posting.save
+      # flash[:notice] = "You have successfully created a posting #{@posting.name}!"
+      redirect_to '/'
+    else
+      render :new
+    end
 end
 
 def edit
