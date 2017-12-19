@@ -2,6 +2,7 @@ class PostingsController < ApplicationController
 
 def index
   @postings = Posting.all
+  postings_portland = Posting.craigslist_scraper("https://portland.craigslist.org/search/apa?bundleDuplicates=1&availabilityMode=0")
 end
 
 def show
