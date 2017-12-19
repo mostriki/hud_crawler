@@ -2,7 +2,7 @@
 
 ### XPath Targets for Posting
 
-- [x] posting_link _.xpath("//a[@class='result-title hdrlnk']/@href")_
+- [x] postings_link _.xpath("//a[@class='result-title hdrlnk']/@href")_
 - [x] posting_title _.xpath("//span[@id='titletextonly']").text_
 - [x] posting_specific_location _.xpath("//span[@class='postingtitletext']/small").text_
 - [x] posting_body _.xpath("//section[@id='postingbody']")_
