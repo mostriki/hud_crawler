@@ -27,16 +27,16 @@ class Posting < ApplicationRecord
     # posting_link = nokogiri_object.xpath("//a[@class='result-title hdrlnk']/@href")
 
     # posting_link.each do |link|
-      nokogiri_object2 = Nokogiri::HTML(open("https://portland.craigslist.org/clc/apa/d/4-bed-2-bath-huge-lots-of/6431856676.html").read)
+      nokogiri_object2 = Nokogiri::HTML(open("https://portland.craigslist.org/clc/apa/d/single-level-updated-two/6431978804.html").read)
       posting_title = nokogiri_object2.xpath("//span[@id='titletextonly']").text
-      posting_specific_location = nokogiri_object2.xpath("//span[@class='postingtitletext']/small").text
+      posting_specific_location = nokogiri_object2.xpath("//span[@class='postingtitletext']/small").text.gsub(/[()]/, '')
       posting_body = nokogiri_object2.xpath("//section[@id='postingbody']").text
       posting_price = nokogiri_object2.xpath("//span[@class='price']").text.gsub!('$','').to_d.floor
       posting_bedroom = nokogiri_object2.xpath("//span[@class='shared-line-bubble'][1]/b[1]").text.to_i
-      posting_square_feet = nokogiri_object2.xpath("//span[@class='shared-line-bubble'][2]").text.to_i
-      posting_address = nokogiri_object2.xpath("//div[@class='mapaddress']").text
       binding.pry
-      posting_post_id = nokogiri_object2.xpath("//p[@class='postinginfo'][1]").text.to_i
+      posting_square_feet = nokogiri_object2.xpath("//span[@class='shared-line-bubble'][2]/b").text.to_i
+      posting_address = nokogiri_object2.xpath("//div[@class='mapaddress']").text
+      posting_post_id = nokogiri_object2.xpath("//p[@class='postinginfo'][1]").text.gsub(/\D/, '').to_i
       posting_date_posted = nokogiri_object2.xpath("//time[@class='date timeago']").text.split(' ')[0]
 
       # posting_email_address = .xpath("//a[@class='mailapp']")
@@ -59,7 +59,6 @@ class Posting < ApplicationRecord
 
                       # posting_housing_type: posting_housing_type,
                       # posting_parking: posting_parking,
-                      # posting_furnished: posting_furnished,
                       # posting_wheelchair: posting_wheelchair,
 
                       # complete: nil,

@@ -21,9 +21,9 @@
 - [x] posting_housing_type _(apartment, condo, cottage/cabin, duplex, flat, house, in-law, loft, townhouse, manufactured, assisted living, land)_
 - [ ] posting_laundy _(w/d in unit, w/d hookups, laundry in bldg, laundry on site, no laundry on site)_
 - [x] posting_parking _(carport, attached garage, detached garage, off-street parking, street parking, valet parking, no)_ parking
-- [x] cats are OK - purrr
-- [x] dogs are OK - wooof
-- [x] furnished
+- [ ] cats are OK - purrr
+- [ ] dogs are OK - wooof
+- [ ] furnished
 - [ ] no smoking
 - [x] wheelchair accessible
 
