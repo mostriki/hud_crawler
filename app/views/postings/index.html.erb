@@ -1,21 +1,3 @@
-INDEX VIEW
+<h1>Portland Craigslist</h1>
 
-<h1>1 - <%= @postings.find(1).posting_title %></h1>
-<br>
-<h4>2 - <%= @postings.find(1).posting_link %></h4>
-<br>
-<p>3 - <%= @postings.find(1).posting_body %></p>
-<br>
-<p>4 - $<%= @postings.find(1).posting_price %></p>
-<br>
-<p>5 - <%= @postings.find(1).posting_bedroom %></p>
-<br>
-<p>6 - <%= @postings.find(1).posting_square_feet %></p>
-<br>
-<p>7 - <%= @postings.find(1).posting_specific_location %></p>
-<br>
-<p>8 - <%= @postings.find(1).posting_address %></p>
-<br>
-<p>9 - <%= @postings.find(1).posting_date_posted %></p>
-<br>
-<p>10 - <%= @postings.find(1).posting_post_id %></p>
+  <%= render "layouts/table" %>

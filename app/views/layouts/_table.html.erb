@@ -1,0 +1,39 @@
+<% if @postings.any?%>
+  <table class="highlight responsive-table bordered">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Post Link</th>
+        <th>Body</th>
+        <th>Price</th>
+        <th>Br</th>
+        <th>ft&sup2;</th>
+        <th>Location</th>
+        <th>Street Address</th>
+        <th>Date Posted</th>
+        <th>Post ID</th>
+        <th></th>
+      </tr>
+    </thead>
+    <% @postings.each do |post|%>
+      <tbody>
+        <tr>
+          <td><%= post.posting_title %></td>
+          <td><%= link_to "Link", post.posting_link, target: :_blank %></td>
+          <td><%= post.posting_body %></td>
+          <td>$<%= post.posting_price %></td>
+          <td><%= post.posting_bedroom %></td>
+          <td><%= post.posting_square_feet %></td>
+          <td><%= post.posting_specific_location %></td>
+          <td><%= post.posting_address %></td>
+          <td><%= post.posting_date_posted %></td>
+          <td><%= post.posting_post_id %></td>
+          <td>Show</td>
+          <td>Delete</td>
+        </tr>
+      </tbody>
+  <% end %>
+  </table>
+<% else %>
+  <p>There are no postings to display!</p>
+<% end %>
