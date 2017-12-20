@@ -6,12 +6,12 @@
 - [x] posting_title _.xpath("//span[@id='titletextonly']").text_
 - [x] posting_specific_location _.xpath("//span[@class='postingtitletext']/small").text_
 - [x] posting_body _.xpath("//section[@id='postingbody']")_
-- [x] posting_square_footage _.xpath("//span[@class='shared-line-bubble'][2]").text.to_i_
-- [x] posting_price _.xpath("//span[@class='price']").text.gsub!('$','').text.gsub!('$','').to_i_
+- [x] posting_square_feet _.xpath("//span[@class='shared-line-bubble'][2]").text.to_i_
+- [x] posting_price _.xpath("//span[@class='price']").text.gsub!('$','').to_i_
 - [ ] posting_availability _.xpath("//span[@class='housing_movein_now property_date shared-line-bubble attr_is_today']")_
-- [x] posting_bedrooms _.xpath("//span[@class='shared-line-bubble'][1]/b[1]").children.text.to_i_
+- [x] posting_bedroom _.xpath("//span[@class='shared-line-bubble'][1]/b[1]").children.text.to_i_
 - [ ] posting_bathrooms _.xpath("//span[@class='shared-line-bubble'][1]/b[2]").children.text.to_i_
-- [x] posting_address_street _.xpath("//div[@class='mapaddress']").children.text_
+- [x] posting_address _.xpath("//div[@class='mapaddress']").children.text_
 - [x] posting_email_address _.xpath("//a[@class='mailapp']")_
 - [x] posting_phone_number _.xpath("//p[@class='reply-tel-number']")_
 - [x] posting_date_posted _.xpath("//time[@class='date timeago']").text.split(' ')[0]_
