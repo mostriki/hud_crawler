@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HUDCrawler</title>
+    <meta charset="utf-8">
+    <title>HUD Crawler</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +10,15 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <%= render "layouts/nav" %>
+
+    <div class="container">
+      <%= render "layouts/alerts" %>
+      <%= yield %>
+    </div>
+
+    <%= render "layouts/footer" %>
+
   </body>
 </html>
