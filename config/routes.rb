@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  root to: "postings#index"
+  root "pages#about"
+
+  
+  get 'error', to: 'pages#error'
 
   resources :postings
 
