@@ -33,7 +33,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'bootstrap'
+gem 'materialize-sass'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
 gem 'nokogiri'
 
 group :development, :test do
@@ -46,6 +47,7 @@ group :development, :test do
   gem 'capybara'
   gem 'shoulda-matchers'
   gem 'factory_bot_rails'
+  gem 'simplecov', require: false
 end
 
 group :development do
