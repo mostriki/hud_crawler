@@ -1,12 +1,9 @@
 class PostingsController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update, :destroy]
 
 def index
   @postings = Posting.all
   postings_portland = Posting.craigslist_scraper("https://portland.craigslist.org/search/apa?bundleDuplicates=1&availabilityMode=0")
-end
-
-def new
-  @posting = Posting.new
 end
 
 def create
@@ -17,15 +14,6 @@ def create
     else
       render :new
     end
-end
-
-def edit
-  @posting = Posting.find(params[:id])
-end
-
-def update
-  @posting = Posting.find(params[:id])
-
 end
 
 def destroy
