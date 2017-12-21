@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221004136) do
+ActiveRecord::Schema.define(version: 20171221004732) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20171221004136) do
     t.decimal "posting_price"
     t.integer "posting_bedroom"
     t.integer "posting_square_feet"
-    t.string "posting_specific_location"
     t.string "posting_address"
     t.string "posting_email"
     t.string "posting_phone"
@@ -32,9 +31,10 @@ ActiveRecord::Schema.define(version: 20171221004136) do
     t.string "posting_parking"
     t.boolean "posting_furnished"
     t.boolean "posting_wheelchair"
-    t.boolean "complete"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "contacted"
+    t.string "posting_location"
   end
 
 end
