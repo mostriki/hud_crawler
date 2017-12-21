@@ -5,10 +5,6 @@ def index
   postings_portland = Posting.craigslist_scraper("https://portland.craigslist.org/search/apa?bundleDuplicates=1&availabilityMode=0")
 end
 
-def show
-  @posting = Posting.find(params[:id])
-end
-
 def new
   @posting = Posting.new
 end
@@ -46,7 +42,7 @@ private
                                     :posting_price,
                                     :posting_bedroom,
                                     :posting_square_feet,
-                                    :posting_specific_location,
+                                    :posting_location,
                                     :posting_address,
                                     :posting_email,
                                     :posting_phone,
@@ -56,7 +52,7 @@ private
                                     :posting_parking,
                                     :posting_furnished,
                                     :posting_wheelchair,
-                                    :complete,
-                                    :discrimination)
+                                    :contacted,
+                                    )
   end
 end
