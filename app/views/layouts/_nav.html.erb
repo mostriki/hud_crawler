@@ -5,6 +5,14 @@
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/">About</a></li>
         <li><a href="/postings">City</a></li>
+
+        <% if current_user %>
+          <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></a></li>
+        <% else %>
+          <li><%= link_to "Register", new_user_registration_path %></a></li>
+          <li><%= link_to "Sign In", new_user_session_path %></a></li>
+        <% end %>
+
       </ul>
     </div>
   </div>
