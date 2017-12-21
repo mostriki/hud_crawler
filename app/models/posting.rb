@@ -1,7 +1,5 @@
 class Posting < ApplicationRecord
   require 'open-uri'
-  require 'bigdecimal'
-  require 'bigdecimal/util'
 
   # validates :posting_link, :presence => true
   # validates :posting_title, :presence => true

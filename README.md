@@ -1,18 +1,22 @@
 
 # HUD Crawler
 
-##### Final capstone project exploring Ruby on Rails, 12.18.2017
+##### Final capstone project exploring Ruby on Rails, regular expressions, and web crawling, 12.18.2017
 
 ##### By Riki Montgomery
 
 ### Description
 
-The purpose of this project is to build an income source discrimination tracker to target localities in the states of Oregon and Washington, in order to advance legislation and legal recourse for low-income communities that are negatively affected. As of 2016 there were [42 jurisdictions](https://affordablehousingonline.com/source-of-income-antidiscrimination-laws) that prohibit discrimination against Section 8 Housing Choice Voucher holders. This application will be used as a proof of concept for non-profit legal aid providers in Oregon and [Oregon housing authorities](https://www.orhousingauthorities.org/) to assist those localities in the fight against income source discrimination. It has the added potential to help advocates, regulators, senators, city counselors, and members of congress advance legislation nationwide or make a case to affect change at a grassroots level by demonstrating the impact that this type of discrimination has on housing supply for low-income individuals while our cities struggle to address the housing crisis.
+The purpose of this project is to build an income source discrimination tracker to target localities in the states of Oregon and Washington, in order to advance legislation and legal recourse for low-income communities that are negatively affected. As of 2016 there were [42 jurisdictions](https://affordablehousingonline.com/source-of-income-antidiscrimination-laws) in the United States that prohibit discrimination against Section 8 Housing Choice Voucher holders. This application will be used as a proof of concept for non-profit legal aid providers in Oregon and [Oregon housing authorities](https://www.orhousingauthorities.org/) to assist those localities in the fight against income source discrimination. It has the added potential to help regulators, senators, city counselors, and members of congress advance legislation nationwide. It could also help activists make a case to affect change at a grassroots level by demonstrating the impact that this type of discrimination has on housing supply for low-income individuals while our cities struggle to address the housing crisis.
 
-### Examples
+[![​​Oregon's Voucher
+Non-Discrimination Law Explained](/Users/Guest/Desktop/hud_crawler/app/assets/images/non_discrimination_video_link.png)](https://www.youtube.com/watch?time_continue=24&v=tGk9HhSTrbQ)
+
+### Examples of Discrimination
 
 [Example 1](https://eugene.craigslist.org/apa/d/great-duplex-avail-jan-1st/6411064407.html)
-[Example 2](https://corvallis.craigslist.org/apa/d/3-bedroom-2-bath/6412158992.html)
+[Example 2](https://bend.craigslist.org/apa/d/3bth1500-sqftold-mill/6359537631.html)
+[Example 3](https://bend.craigslist.org/apa/d/3bth1500-sqftold-mill/6359537631.html)
 
 
 ### Further Exploration
@@ -42,11 +46,7 @@ The purpose of this project is to build an income source discrimination tracker 
 * nokogiri
 * devise
 * geokit or area
-* rspec
-* capybara
-* factorybot
-
-### Configuration
+* mechanize
 
 
 

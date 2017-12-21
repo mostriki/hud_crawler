@@ -1,12 +1,26 @@
 # User Stories
 
-### XPath Targets for Posting
 
-- [x] postings_link _.xpath("//a[@class='result-title hdrlnk']/@href")_
+- [x] As a user I want to select a city and see a list of craigslist posts with relevant information.
+- [x] As a user want to be able to click on a post's id and see a new tab open that directly links me to that post on craigslist.
+- [ ] As a user I want to be able to read an about page detailing the purpose of this project.
+- [ ] As a user I want to be able to check off each listing if I have contacted the poster.
+- [ ] As a user I want to be able to mark a listing as a false positive.
+- [ ] As a user I want to be able to see a count of all listings that are in violation of Oregon's non-discrimination law, their locations, and dates.
+- [ ] As a user I want to be able to see the posters email and phone number so that I may contact them if necessary.
+- [ ] As a user I want to be able to trigger the web scraper with the click of a button so that simply refreshing the page does not trigger it each time.
+- [ ] As a user I want to be able to compare statistics from listings in different regions, states and localities.
+- [x] As a user I want to be able to sign in to the application using secure authorization.
+- [ ] As a user I don't want to see duplicate listing every time I scrape craigslist.
+- [ ] As a user I don't want to see listings that are not in violation of Oregon's non-discrimination law.
+
+### XPath Targets
+
+- [ ] postings_link _.xpath("//a[@class='result-title hdrlnk']/@href")_
 - [ ] posting_title _.xpath("//span[@id='titletextonly']").text_
-- [x] posting_location _.xpath("//span[@class='postingtitletext']/small").text_
+- [ ] posting_location _.xpath("//span[@class='postingtitletext']/small").text_
 - [x] posting_body _.xpath("//section[@id='postingbody']")_
-- [x] posting_square_feet _.xpath("//span[@class='shared-line-bubble'][2]").text.to_i_
+- [ ] posting_square_feet _.xpath("//span[@class='shared-line-bubble'][2]").text.to_i_
 - [x] posting_price _.xpath("//span[@class='price']").text.gsub!('$','').to_i_
 - [ ] posting_availability _.xpath("//span[@class='housing_movein_now property_date shared-line-bubble attr_is_today']")_
 - [x] posting_bedroom _.xpath("//span[@class='shared-line-bubble'][1]/b[1]").children.text.to_i_
