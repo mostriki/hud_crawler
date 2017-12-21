@@ -30,7 +30,10 @@ end
 
 def destroy
   @posting = Posting.find(params[:id])
-
+  if @posting.destroy
+    flash[:alert] = "You have successfully deleted #{@posting.posting_post_id}!"
+    redirect_to '/'
+  end
 end
 
 private
