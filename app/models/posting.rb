@@ -9,7 +9,7 @@ class Posting < ApplicationRecord
   # validates :posting_price, :presence => true
   # validates :posting_bedroom, :presence => true
   # validates :posting_square_feet, :presence => true
-  # validates :posting_specific_location, :presence => true
+  # validates :posting_location, :presence => true
   # validates :posting_address, :presence => true
   # validates :posting_email, :presence => true
   # validates :posting_phone, :presence => true
@@ -29,7 +29,7 @@ class Posting < ApplicationRecord
     posting_link.each do |link|
       nokogiri_object2 = Nokogiri::HTML(open(link).read)
       posting_title = nokogiri_object2.xpath("//span[@id='titletextonly']").text
-      posting_specific_location = nokogiri_object2.xpath("//span[@class='postingtitletext']/small").text.gsub(/[()]/, '')
+      posting_location = nokogiri_object2.xpath("//span[@class='postingtitletext']/small").text.gsub(/[()]/, '')
       posting_body = nokogiri_object2.xpath("//section[@id='postingbody']").text
       posting_price = nokogiri_object2.xpath("//span[@class='price']").text.gsub!('$','').to_i
       posting_bedroom = nokogiri_object2.xpath("//span[@class='shared-line-bubble'][1]/b[1]").text.to_i
@@ -42,26 +42,20 @@ class Posting < ApplicationRecord
       # posting_phone_number = .xpath("//p[@class='reply-tel-number']")
 
       Posting.create!(posting_link: link,
-                      posting_title: posting_title,
-                      posting_body: "No HUD/Vouchers",
-                      # remove decimal point or add 2
-                      posting_price: posting_price,
                       posting_bedroom: posting_bedroom,
                       posting_square_feet: posting_square_feet,
-                      posting_specific_location: posting_specific_location,
+                      posting_location: posting_location,
                       posting_address: posting_address,
                       posting_date_posted: posting_date_posted,
                       posting_post_id: posting_post_id
-
-                      # posting_email: posting_email,
-                      # posting_phone: posting_phone,
-
-                      # posting_housing_type: posting_housing_type,
-                      # posting_parking: posting_parking,
-                      # posting_wheelchair: posting_wheelchair,
-
-                      # complete: nil,
-                      # discrimination: nil
+                      # remove decimal point or add 2
+                      posting_price: posting_price,
+                      # Still need to be grabbed
+                      posting_body: "No HUD/Vouchers",
+                      posting_email: "placeholder@gmail.com",
+                      posting_phone: "(123) 456-789",
+                      posting_housing_type: posting_housing_type,
+                      posting_wheelchair: posting_wheelchair,
                       )
     end
   end

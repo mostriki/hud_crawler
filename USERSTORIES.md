@@ -3,8 +3,8 @@
 ### XPath Targets for Posting
 
 - [x] postings_link _.xpath("//a[@class='result-title hdrlnk']/@href")_
-- [x] posting_title _.xpath("//span[@id='titletextonly']").text_
-- [x] posting_specific_location _.xpath("//span[@class='postingtitletext']/small").text_
+- [ ] posting_title _.xpath("//span[@id='titletextonly']").text_
+- [x] posting_location _.xpath("//span[@class='postingtitletext']/small").text_
 - [x] posting_body _.xpath("//section[@id='postingbody']")_
 - [x] posting_square_feet _.xpath("//span[@class='shared-line-bubble'][2]").text.to_i_
 - [x] posting_price _.xpath("//span[@class='price']").text.gsub!('$','').to_i_
@@ -12,7 +12,7 @@
 - [x] posting_bedroom _.xpath("//span[@class='shared-line-bubble'][1]/b[1]").children.text.to_i_
 - [ ] posting_bathrooms _.xpath("//span[@class='shared-line-bubble'][1]/b[2]").children.text.to_i_
 - [x] posting_address _.xpath("//div[@class='mapaddress']").children.text_
-- [x] posting_email_address _.xpath("//a[@class='mailapp']")_
+- [x] posting_email _.xpath("//a[@class='mailapp']")_
 - [x] posting_phone_number _.xpath("//p[@class='reply-tel-number']")_
 - [x] posting_date_posted _.xpath("//time[@class='date timeago']").text.split(' ')[0]_
 - [x] posting_post_id _.xpath("//p[@class='postinginfo'][1]")_
@@ -20,7 +20,7 @@
 ### XPath Targets for Amenities
 - [x] posting_housing_type _(apartment, condo, cottage/cabin, duplex, flat, house, in-law, loft, townhouse, manufactured, assisted living, land)_
 - [ ] posting_laundy _(w/d in unit, w/d hookups, laundry in bldg, laundry on site, no laundry on site)_
-- [x] posting_parking _(carport, attached garage, detached garage, off-street parking, street parking, valet parking, no)_ parking
+- [ ] posting_parking _(carport, attached garage, detached garage, off-street parking, street parking, valet parking, no)_ parking
 - [ ] cats are OK - purrr
 - [ ] dogs are OK - wooof
 - [ ] furnished

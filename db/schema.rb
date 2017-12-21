@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171220023812) do
+ActiveRecord::Schema.define(version: 20171221004136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20171220023812) do
     t.boolean "posting_furnished"
     t.boolean "posting_wheelchair"
     t.boolean "complete"
-    t.boolean "discrimination"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
