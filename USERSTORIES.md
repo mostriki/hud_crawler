@@ -27,14 +27,14 @@
 - [ ] no smoking
 - [x] wheelchair accessible
 
-* posting_optional_field1 _.xpath("//p[@class='attrgroup'][3]/span[1]").text_
-* posting_optional_field2 _.xpath("//p[@class='attrgroup'][3]/span[2]").text_
-* posting_optional_field3 _.xpath("//p[@class='attrgroup'][3]/span[3]").text_
-* posting_optional_field4 _.xpath("//p[@class='attrgroup'][3]/span[4]").text_
-* posting_optional_field5 _.xpath("//p[@class='attrgroup'][3]/span[5]").text_
-* posting_optional_field6 _.xpath("//p[@class='attrgroup'][3]/span[6]").text_
-* posting_optional_field7 _.xpath("//p[@class='attrgroup'][3]/span[7]").text_
-* posting_optional_field8 _.xpath("//p[@class='attrgroup'][3]/span[8]").text_
+* posting_optional_field1 _.xpath("//p[@class='attrgroup'][2]/span[1]").text_
+* posting_optional_field2 _.xpath("//p[@class='attrgroup'][2]/span[2]").text_
+* posting_optional_field3 _.xpath("//p[@class='attrgroup'][2]/span[3]").text_
+* posting_optional_field4 _.xpath("//p[@class='attrgroup'][2]/span[4]").text_
+* posting_optional_field5 _.xpath("//p[@class='attrgroup'][2]/span[5]").text_
+* posting_optional_field6 _.xpath("//p[@class='attrgroup'][2]/span[6]").text_
+* posting_optional_field7 _.xpath("//p[@class='attrgroup'][2]/span[7]").text_
+* posting_optional_field8 _.xpath("//p[@class='attrgroup'][2]/span[8]").text_
 
 ### XPath Targets for Open House Dates
 - [ ] posting_open_house_date1 _.xpath("//p[@class='attrgroup'][2]/span[1]")_
