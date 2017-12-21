@@ -2,37 +2,28 @@
   <table class="highlight responsive-table bordered">
     <thead>
       <tr>
-
         <th>Post ID</th>
-        <th>Date Posted</th>
-        <th>Housing Type</th>
-        <th>Street Address</th>
-        <th>Location</th>
-        <th>Body</th>
+        <th>Posted</th>
+        <th>Type</th>
         <th>Bedrooms</th>
-        <th>ft&sup2;</th>
-        <th>Wheelchair Accessible</th>
+        <th>Wheelchair</th>
+        <th>Address</th>
+        <th>Body</th>
         <th>Price</th>
-        <th>Post Link</th>
         <th></th>
       </tr>
     </thead>
     <% @postings.each do |post|%>
       <tbody>
         <tr>
-          <td><%= post.posting_post_id %></td>
+          <td><%= link_to "#{post.posting_post_id}", post.posting_link, target: :_blank %></td>
           <td><%= post.posting_date_posted %></td>
           <td><%= post.posting_housing_type %></td>
-          <td><%= post.posting_address %></td>
-          <td><%= post.posting_location %></td>
-          <td><%= post.posting_phone_number %></td>
-          <td><%= post.posting_email %></td>
-          <td><%= post.posting_body %></td>
           <td><%= post.posting_bedroom %></td>
-          <td><%= post.posting_square_feet %></td>
-          <td><%= post.posting_wheelchair_accessible %></td>
+          <td><%= post.posting_wheelchair %></td>
+          <td><%= post.posting_address %></td>
+          <td><%= post.posting_body %></td>
           <td>$<%= post.posting_price %></td>
-          <td><%= link_to "Link", post.posting_link, target: :_blank %></td>
           <td>Delete</td>
         </tr>
       </tbody>
