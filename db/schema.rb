@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171221004732) do
+ActiveRecord::Schema.define(version: 20171221010344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20171221004732) do
     t.string "posting_link"
     t.string "posting_title"
     t.text "posting_body"
-    t.decimal "posting_price"
     t.integer "posting_bedroom"
     t.integer "posting_square_feet"
     t.string "posting_address"
@@ -35,6 +34,7 @@ ActiveRecord::Schema.define(version: 20171221004732) do
     t.datetime "updated_at", null: false
     t.boolean "contacted"
     t.string "posting_location"
+    t.string "posting_price"
   end
 
 end

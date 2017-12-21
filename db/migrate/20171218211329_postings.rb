@@ -4,7 +4,7 @@ class Postings < ActiveRecord::Migration[5.1]
       t.string :posting_link
       t.string :posting_title
       t.text :posting_body
-      t.decimal :posting_price
+      t.string :posting_price
       t.integer :posting_bedroom
       t.integer :posting_square_feet
       t.string :posting_specific_location
