@@ -47,7 +47,8 @@ class Posting < ApplicationRecord
       posting_wheelchair = posting_options.any? {|w| w == 'wheelchair accessible'}
 
       for i in posting_options
-        if (i == "apartment" || i == "condo" || i == "cottage/cabin" || i == "duplex" || i == "flat" || i == "house" || i == "in-law" || i == "loft" || i == "townhouse" || i == "manufactured" || i == "assisted living" || i == "land")
+        if (i == "apartment" || i == "condo" || i == "cottage/cabin" || i == "duplex" || i == "flat" || i == "house" || 
+            i == "in-law" || i == "loft" || i == "townhouse" || i == "manufactured" || i == "assisted living" || i == "land")
           posting_housing_type = i
         end
       end
