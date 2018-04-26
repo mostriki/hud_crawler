@@ -19,7 +19,7 @@ The purpose of this project is to build an income source discrimination tracker 
 
 ### Task List
 
-- [] Create a rake task that scrapes at irregular intervals.
+- [x] Create a rake task that scrapes at irregular intervals.
 
 - [] Integrate pagination with the Kaminari Gem or Will_Paginate Gem
 
