@@ -39,7 +39,9 @@ The purpose of this project is to build an income source discrimination tracker 
 
 - [] Consider using the (whenever)[https://github.com/javan/whenever] and (capistrano)[https://github.com/capistrano/capistrano] Gems to schedule cron jobs, i.e. (Rails Casts)[http://railscasts.com/episodes/164-cron-in-ruby?autoplay=true]. 
 
-- [] Figure out how to take and save snapshots of each page and save it in the database. 
+- [] Figure out how to take and save snapshots of each page and save it in the database, i.e. (PhantomJS)[https://rubyinrails.com/2015/02/14/ruby-screenshot-website-capture-screencap-phantomjs/] or the (screencap) Gem[https://redpanthers.co/screenshots-using-ruby/]
+
+- [] Strip out materialize and replace it with better CSS or SCSS and vanilla JavaScript if there is time. 
 
 ### Further Exploration
 
