@@ -21,6 +21,8 @@ The purpose of this project is to build an income source discrimination tracker 
 
 - [x] Create a rake task that scrapes at irregular intervals.
 
+- [] Use Heroku scheduler for the rake task when deployed.
+
 - [] Integrate pagination with the Kaminari Gem or Will_Paginate Gem
 
 - [] Create a function to check and remove duplicates.
@@ -30,6 +32,10 @@ The purpose of this project is to build an income source discrimination tracker 
 - [] Write regex to target instances of discrimination using the levenshtein distance algorithm.
 
 - [] Integrate Mechanize to click through CL pages.
+
+- [] Integrate email notifications to alert the user when listings are flagged.
+
+- [] Consider using the (whenever)[https://github.com/javan/whenever] Gem to schedule cron jobs. 
 
 ### Further Exploration
 
