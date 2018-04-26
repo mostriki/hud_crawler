@@ -39,6 +39,8 @@ The purpose of this project is to build an income source discrimination tracker 
 
 - [] Consider using the (whenever)[https://github.com/javan/whenever] and (capistrano)[https://github.com/capistrano/capistrano] Gems to schedule cron jobs, i.e. (Rails Casts)[http://railscasts.com/episodes/164-cron-in-ruby?autoplay=true]. 
 
+- [] Figure out how to take and save snapshots of each page and save it in the database. 
+
 ### Further Exploration
 
 - [] Compare cities, states, and counties with anti-income source discrimination laws against those without.
