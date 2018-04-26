@@ -35,6 +35,8 @@ The purpose of this project is to build an income source discrimination tracker 
 
 - [] Integrate email notifications to alert the user when listings are flagged.
 
+- [] Integrate and test cross-browser functionality.
+
 - [] Consider using the (whenever)[https://github.com/javan/whenever] and (capistrano)[https://github.com/capistrano/capistrano] Gems to schedule cron jobs, i.e. (Rails Casts)[http://railscasts.com/episodes/164-cron-in-ruby?autoplay=true]. 
 
 ### Further Exploration
