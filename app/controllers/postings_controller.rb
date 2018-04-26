@@ -2,8 +2,8 @@ class PostingsController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :create, :edit, :update, :destroy]
 
 def index
+  puts "The time is: #{Time.now}"
   @postings = Posting.all
-  postings_portland = Posting.craigslist_scraper("https://portland.craigslist.org/search/apa?bundleDuplicates=1&availabilityMode=0")
 end
 
 def create
