@@ -3,7 +3,7 @@ class PostingsController < ApplicationController
 
 def index
   puts "The time is: #{Time.now}"
-  @postings = Posting.all
+  @postings = Posting.page(params[:page]).per(10)
 end
 
 def create
