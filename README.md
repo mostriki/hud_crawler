@@ -23,7 +23,7 @@ The purpose of this project is to build an income source discrimination tracker 
 
 - [] Use Heroku scheduler for the rake task when deployed.
 
-- [] Integrate pagination with the Kaminari Gem or Will_Paginate Gem
+- [x] Integrate pagination with the Kaminari Gem or Will_Paginate Gem
 
 - [] Create a function to check and remove duplicates.
 
@@ -35,13 +35,13 @@ The purpose of this project is to build an income source discrimination tracker 
 
 - [] Integrate email notifications to alert the user when listings are flagged.
 
+- [] Take and save snapshots of each page and save it in the database, i.e. (PhantomJS)[https://rubyinrails.com/2015/02/14/ruby-screenshot-website-capture-screencap-phantomjs/] or the (screencap) Gem[https://redpanthers.co/screenshots-using-ruby/]
+
+- [] Strip out materialize and replace it with better CSS or SCSS and vanilla JavaScript if there is time. 
+
 - [] Integrate and test cross-browser functionality.
 
 - [] Consider using the (whenever)[https://github.com/javan/whenever] and (capistrano)[https://github.com/capistrano/capistrano] Gems to schedule cron jobs, i.e. (Rails Casts)[http://railscasts.com/episodes/164-cron-in-ruby?autoplay=true]. 
-
-- [] Figure out how to take and save snapshots of each page and save it in the database, i.e. (PhantomJS)[https://rubyinrails.com/2015/02/14/ruby-screenshot-website-capture-screencap-phantomjs/] or the (screencap) Gem[https://redpanthers.co/screenshots-using-ruby/]
-
-- [] Strip out materialize and replace it with better CSS or SCSS and vanilla JavaScript if there is time. 
 
 ### Further Exploration
 
