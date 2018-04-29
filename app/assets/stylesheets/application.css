@@ -14,3 +14,47 @@
  *= require_tree .
  */
 
+
+/* ---- main elements ---- */
+
+/* ---- home grid ---- */
+
+/* ---- city grid ---- */
+
+/* ---- user grid ---- */
+
+/* ---- home images ---- */
+
+/* ---- main wrapper ---- */
+
+.home_container {
+	width: 70%;
+	margin: 0 auto;
+}
+
+/* ---- media queries ---- */
+
+/* tablet   */
+@media (max-width: 768px) {
+
+}
+
+/* desktop */
+@media (max-width: 1024px) {
+
+}
+
+/* large */
+@media (max-width: 1200px) {
+
+}
+
+/* xlarge */
+@media (max-width: 1400px) {
+
+}
+
+/* xxlarge */
+@media (max-width: 1600px) {
+
+}
