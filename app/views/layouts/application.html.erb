@@ -11,14 +11,22 @@
 
   <body>
 
-    <%= render "layouts/nav" %>
+    <div class="wrapper">
+      <div class="wrap">
+        <nav class="header">
+          <%= render "layouts/nav" %>
+        </nav>
 
-    <div class="home_container">
-      <%= render "layouts/alerts" %>
-      <%= yield %>
+        <div class="container">
+          <%= render "layouts/alerts" %>
+          <%= yield %>
+        </div>
+      </div>
+      
+      <footer class="footer">
+        <%= render "layouts/footer" %>
+      </footer>
     </div>
-
-    <%= render "layouts/footer" %>
-
   </body>
+
 </html>
