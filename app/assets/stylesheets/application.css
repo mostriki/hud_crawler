@@ -17,8 +17,23 @@
 
 /* ---- main elements ---- */
 
-body {
+* {
+  box-sizing: border-box;
+}
 
+body {
+  line-height: 1.6;
+  color: #3a3a3a;
+}
+
+a { 
+	text-decoration: none;
+}
+
+ol, ul {
+ margin: 0;
+ padding: 0;
+ list-style: none;
 }
 
 /* ---- home grid ---- */
@@ -29,14 +44,35 @@ body {
 
 /* ---- home images ---- */
 
-/* ---- header ---- */
+/* ---- header and nav ---- */
 
 .header {
+  padding-top: 1.5em;
+	padding-bottom: 1.5em;
 	background: #3acec2;
+	margin-bottom: 30px;
 }
 
-.header_name {
-  margin: 0;
+.name {
+	font-size: 1.25em;
+}
+
+.name, 
+.navigation li {
+	text-align: center;
+	background: #fff;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+
+.navigation a {
+	font-size: .95em;
+	color: #3acec2;
+	text-transform: uppercase;
+}
+
+.navigation a:hover {
+	color: #093a58;
 }
 
 /* ---- footer ---- */
@@ -54,33 +90,38 @@ body {
 }
 
 .container {
-	width: 70%;
-	margin: 0 auto;
+	padding: 0 1em 0;
 }
 
 /* ---- media queries ---- */
 
 /* tablet   */
-@media (max-width: 768px) {
+@media (min-width: 769px) {
+	.wrap {
+		min-height: calc(100vh - 89px);
+	}
 
+	.container {
+		width: 80%;
+		max-width: 1150px;
+		margin: 0 auto;
+  }
+  
+  .name,
+  .navigation,
+  .navigation li {
+    display: inline;
+  }
 }
 
 /* desktop */
-@media (max-width: 1024px) {
-
-}
+/* @media (max-width: 1024px) {} */
 
 /* large */
-@media (max-width: 1200px) {
-
-}
+/* @media (max-width: 1200px) {} */
 
 /* xlarge */
-@media (max-width: 1400px) {
-
-}
+/* @media (max-width: 1400px) {} */
 
 /* xxlarge */
-@media (max-width: 1600px) {
-
-}
+/* @media (max-width: 1600px) {} */
