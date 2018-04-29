@@ -31,6 +31,14 @@ body {
 
 /* ---- header ---- */
 
+.header {
+	background: #3acec2;
+}
+
+.header_name {
+  margin: 0;
+}
+
 /* ---- footer ---- */
 
 .footer {
