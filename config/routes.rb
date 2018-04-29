@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root "pages#about"
+  root "pages#home"
 
   
   get 'error', to: 'pages#error'
