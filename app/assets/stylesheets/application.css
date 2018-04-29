@@ -17,6 +17,10 @@
 
 /* ---- main elements ---- */
 
+body {
+
+}
+
 /* ---- home grid ---- */
 
 /* ---- city grid ---- */
@@ -25,9 +29,23 @@
 
 /* ---- home images ---- */
 
-/* ---- main wrapper ---- */
+/* ---- header ---- */
 
-.home_container {
+/* ---- footer ---- */
+
+.footer {
+  text-align: center;
+	padding: 2em 0;
+	background: #d9e4ea;
+}
+
+/* ---- containers and wrappers ---- */
+
+.wrap {
+  min-height: calc(100vh - 82px);
+}
+
+.container {
 	width: 70%;
 	margin: 0 auto;
 }
