@@ -29,17 +29,23 @@ The purpose of this project is to build an income source discrimination tracker 
 
 - [] Write more tests(!!!)!
 
-- [] Write regex to target instances of discrimination using the levenshtein distance algorithm.
+- [] Write regex to target instances of discrimination for `nokogiri_object2.xpath("//section[@id='postingbody']").text`
 
-- [] Integrate Mechanize to click through CL pages.
+- [] Integrate the [levenshtein distance algorithm](https://stackoverflow.com/questions/16323571/measure-the-distance-between-two-strings-with-ruby?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa).
+
+- [] Integrate [Mechanize](http://docs.seattlerb.org/mechanize/GUIDE_rdoc.html) to click through CL pages.
+
+- [] Integrate [Mechanize](http://docs.seattlerb.org/mechanize/GUIDE_rdoc.html) to click through and save emails `new_posting[:posting_email] = nokogiri_object2.xpath("//a[@class='mailapp']")`
+
+- [] Integrate [Mechanize](http://docs.seattlerb.org/mechanize/GUIDE_rdoc.html) to click through and save phone numbers `new_posting[:posting_phone] = nokogiri_object2.xpath("//p[@class='reply-tel-number']")`
 
 - [] Integrate email notifications to alert the user when listings are flagged.
 
 - [] Take and save snapshots of each page and save it in the database, i.e. (PhantomJS)[https://rubyinrails.com/2015/02/14/ruby-screenshot-website-capture-screencap-phantomjs/] or the (screencap) Gem[https://redpanthers.co/screenshots-using-ruby/]
 
-- [] Strip out materialize and replace it with better CSS or SCSS and vanilla JavaScript if there is time. 
+- [x] Strip out materialize and replace it with CSS. 
 
-- [] Integrate and test cross-browser functionality.
+- [] Integrate cross-browser functionality.
 
 - [] Consider using the (whenever)[https://github.com/javan/whenever] and (capistrano)[https://github.com/capistrano/capistrano] Gems to schedule cron jobs, i.e. (Rails Casts)[http://railscasts.com/episodes/164-cron-in-ruby?autoplay=true]. 
 
@@ -52,9 +58,6 @@ The purpose of this project is to build an income source discrimination tracker 
 - [] Create a form to collect data from other localities for grassroots organizers and legislators in those areas to affect change in those areas.
 
 - [] Make the project open source.
-
-- [] Google Maps API
-
 
 ### Technologies Used
 
