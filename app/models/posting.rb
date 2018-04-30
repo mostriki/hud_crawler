@@ -20,8 +20,8 @@ class Posting < ApplicationRecord
   # validates :complete, :presence => true
   # validates :discrimination, :presence => true
 
-  def self.craigslist_scraper(city_url)
-    nokogiri_object = Nokogiri::HTML(open(city_url).read)
+  def self.craigslist_scraper(url)
+    nokogiri_object = Nokogiri::HTML(open(url).read)
     posting_link = nokogiri_object.xpath("//a[@class='result-title hdrlnk']/@href")
 
     posting_link.each do |link|
@@ -34,14 +34,9 @@ class Posting < ApplicationRecord
       posting_date_posted = nokogiri_object2.xpath("//time[@class='date timeago']").text.split(' ')[0]
 
       posting_options = []
-      posting_optional_field1 = posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[1]").text)
-      posting_optional_field2 = posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[2]").text)
-      posting_optional_field3 = posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[3]").text)
-      posting_optional_field4 = posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[4]").text)
-      posting_optional_field5 = posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[5]").text)
-      posting_optional_field6 = posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[6]").text)
-      posting_optional_field7 = posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[7]").text)
-      posting_optional_field8 = posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[8]").text)
+      1.upto(8).each do |span_number|
+      posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[#{span_number}]").text)
+      end
 
       posting_housing_type = ""
       posting_wheelchair = posting_options.any? {|w| w == 'wheelchair accessible'}
