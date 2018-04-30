@@ -26,7 +26,8 @@ class Posting < ApplicationRecord
 
     posting_link.each do |link|
       nokogiri_object2 = Nokogiri::HTML(open(link).read)
-      posting_body = nokogiri_object2.xpath("//section[@id='postingbody']").text
+      
+      # posting_body = nokogiri_object2.xpath("//section[@id='postingbody']").text
       posting_price = nokogiri_object2.xpath("//span[@class='price']").text.gsub!('$','').to_i
       posting_bedroom = nokogiri_object2.xpath("//span[@class='shared-line-bubble'][1]/b[1]").text.to_i
       posting_address = nokogiri_object2.xpath("//div[@class='mapaddress']").text
@@ -35,18 +36,26 @@ class Posting < ApplicationRecord
 
       posting_options = []
       1.upto(8).each do |span_number|
-      posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[#{span_number}]").text)
+        posting_options.push(nokogiri_object2.xpath("//p[@class='attrgroup'][2]/span[#{span_number}]").text)
       end
 
-      posting_housing_type = ""
+      valid_options = { "apartment" => true, 
+        "condo" => true, 
+        "cottage/cabin" => true, 
+        "duplex" => true, 
+        "flat" => true, 
+        "house" => true, 
+        "in-law" => true, 
+        "loft" => true, 
+        "townhouse" => true, 
+        "manufactured" => true, 
+        "assisted living" => true, 
+        "land" => true 
+      }
+
+      posting_housing_type = posting_options.select{ |element| valid_options.include?(element) }.join('')
+
       posting_wheelchair = posting_options.any? {|w| w == 'wheelchair accessible'}
-
-      for i in posting_options
-        if (i == "apartment" || i == "condo" || i == "cottage/cabin" || i == "duplex" || i == "flat" || i == "house" || 
-            i == "in-law" || i == "loft" || i == "townhouse" || i == "manufactured" || i == "assisted living" || i == "land")
-          posting_housing_type = i
-        end
-      end
 
       # posting_email = nokogiri_object2.xpath("//a[@class='mailapp']")
       # posting_phone = nokogiri_object2.xpath("//p[@class='reply-tel-number']")
