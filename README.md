@@ -13,9 +13,9 @@ The purpose of this project is to build an income source discrimination tracker 
 
 ### Examples of Discrimination
 
-[Example 1](https://portland.craigslist.org/mlt/apa/d/fair-acres-apartments-2bd/6569475578.html)
-[Example 2](https://portland.craigslist.org/mlt/apa/d/darling-2-bedrooms-with/6559561071.html)
-[Example 3](https://corvallis.craigslist.org/apa/d/3-bed-1-bath-country-mother/6559692412.html)
+- [Example 1](https://portland.craigslist.org/mlt/apa/d/fair-acres-apartments-2bd/6569475578.html)
+- [Example 2](https://portland.craigslist.org/mlt/apa/d/darling-2-bedrooms-with/6559561071.html)
+- [Example 3](https://corvallis.craigslist.org/apa/d/3-bed-1-bath-country-mother/6559692412.html)
 
 ### Task List
 
