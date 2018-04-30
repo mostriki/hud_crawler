@@ -85,7 +85,7 @@ The purpose of this project is to build an income source discrimination tracker 
 
 ### Deployment instructions
 
-Make sure you have postgres running, then run `$ rails serve` and got to [localhost:3000](localhost:3000) in your favorite browser.
+Make sure you have postgres running, then run `$ rails s` and got to [localhost:3000](localhost:3000) in your favorite browser. You can also visit the live site [HERE](https://hudcrawler.herokuapp.com/), if you want to see it in action now. 
 
 ### Additional Information
 
