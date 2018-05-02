@@ -15,11 +15,15 @@
         <th></th>
       </tr>
     </thead>
-    <%= render "postings/post" %>
+    
+    <tbody id="posts">
+      <%= render "postings/post" %>
+    </tbody>
   </table>
-  <tbody>
-    <%= paginate @postings%>
-  </tbody>
+  
+  <div id="paginator">
+    <%= paginate @postings, remote: true%>
+  </div>
 <% else %>
   <p>There are no postings to display!</p>
 <% end %>
