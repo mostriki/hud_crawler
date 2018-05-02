@@ -1,3 +1,25 @@
 <h1>Portland Craigslist</h1>
 
-  <%= render "layouts/table" %>
+<% if @postings.any?%>
+  <table class="highlight responsive-table bordered">
+    <thead>
+      <tr>
+        <th>Post ID</th>
+        <th>Posted</th>
+        <th>Type</th>
+        <th>Bedrooms</th>
+        <th>Wheelchair</th>
+        <th>Address</th>
+        <th>Body</th>
+        <th>Price</th>
+        <th></th>
+      </tr>
+    </thead>
+    <%= render "postings/post" %>
+  </table>
+  <tbody>
+    <%= paginate @postings%>
+  </tbody>
+<% else %>
+  <p>There are no postings to display!</p>
+<% end %>
