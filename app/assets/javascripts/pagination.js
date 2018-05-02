@@ -1,3 +1,5 @@
+// Credit Akira Matsuda, creator of Kaminari for this code (https://github.com/amatsuda/kaminari_example/commits/ajax)
+
 (function($) {
   // Make sure that every Ajax request sends the CSRF token
   function CSRFProtection(xhr) {
